@@ -21,3 +21,6 @@ jobs:
         
       - name: Build docker
         run: docker build . -t lmermod-website
+
+      - name: Restart website
+        run: ~/actions-runner/lmermod-website/restart.sh
