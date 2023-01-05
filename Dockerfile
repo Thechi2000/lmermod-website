@@ -1,4 +1,4 @@
-FROM node:19-bullseye
+FROM --platform=arm64 node:19-bullseye
 
 WORKDIR /usr/src/website
 COPY package*.json ./
