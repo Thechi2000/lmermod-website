@@ -1,4 +1,4 @@
-FROM arm64/node
+FROM --platform=arm64 node
 
 WORKDIR /usr/src/website
 COPY package*.json ./
