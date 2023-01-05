@@ -1,4 +1,4 @@
-FROM arm64/node:19-bullseye
+FROM arm64/node
 
 WORKDIR /usr/src/website
 COPY package*.json ./
