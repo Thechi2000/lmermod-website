@@ -1,9 +1,4 @@
-name: Docker
-
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
+name: build-and-deploy
 
 on:
   push:
@@ -12,6 +7,7 @@ on:
 
 jobs:
   build:
+    name: Build
 
     runs-on: self-hosted
 
@@ -22,5 +18,13 @@ jobs:
       - name: Build docker
         run: docker build . -t lmermod-website
 
+  deploy:
+    name: Deploy
+
+    runs-on: self-hosted
+
+    needs: build
+    
+    steps:
       - name: Restart website
         run: ~/actions-runner/lmermod-website/restart.sh
