@@ -1,6 +1,7 @@
 # Git files
 .gitignore
 .git
+.github
 
 # Node and NPM files
 node_modules
