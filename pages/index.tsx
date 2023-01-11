@@ -1,5 +1,12 @@
+import Head from "next/head"
+
 export default function Home() {
   return (
-    <p>Welcome !</p>
+    <>
+      <Head>      
+        <title>Home - Ludovic Mermod</title>
+      </Head>
+      <p>Welcome !</p>
+    </>
   )
 }

@@ -1,6 +1,13 @@
+import Head from "next/head";
+
 export default function Projects() {
     return (
-      <p>My projects:</p>
+      <>
+        <Head>      
+          <title>Projects - Ludovic Mermod</title>
+        </Head>
+        <p>My projects:</p>
+      </>
     )
   }
   
