@@ -12,10 +12,18 @@
     flex-direction: column;
 
     padding: 1.5%;
+
+    --primary-color: black;
+    --secondary-color: beige;
+}
+
+.dark-theme .navbar {
+    --primary-color: beige;
+    --secondary-color: black;
 }
 
 .navbar a {
-    color: black;
+    color: var(--primary-color);
     font-size: large;
     text-decoration: none;
     
@@ -25,16 +33,16 @@
 }
 
 .navbar a:hover {
-    animation-name: beige;
+    animation-name: navbar-element-hover;
     animation-duration: 0.25s;
-    color: beige;
+    color: var(--secondary-color);
 }
 
-@keyframes beige {
+@keyframes navbar-element-hover {
     from {
-        color: black;
+        color: var(--primary-color);
     }
     to {
-        color: beige;
+        color: var(--secondary-color);
     }
 }
