@@ -1,0 +1,11 @@
+#__next {
+    width: 88%;
+
+    position: absolute;
+    left: 8%;
+    top: 0;
+
+    padding: 2%;
+
+    overflow: scroll;
+}
