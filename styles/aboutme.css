@@ -1,0 +1,42 @@
+#aboutme {
+    margin: 2% 15%;
+    width: 70%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#aboutme section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#aboutme .subsection{
+    margin: 2% 15%;
+    width: 70%;
+    height: fit-content;
+}
+
+#aboutme section .description {
+    width: 50%;
+    text-align: justify;
+}
+
+#aboutme section .logo {
+    width: 20%;
+    height: max-content;
+}
+
+#aboutme .separator {
+    margin: 2% 0;
+
+    background-color: rgb(88, 88, 88);
+
+    height: 2px;
+    width: 90%;
+
+    align-self: center;
+}
