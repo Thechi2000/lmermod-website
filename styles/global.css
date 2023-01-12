@@ -24,3 +24,12 @@ body {
     background-color: var(--background-color);
     color: var(--color);
 }
+
+a {
+    color: rgb(0, 0, 182);
+    text-decoration: none;
+}
+
+.dark-theme a {
+    color: rgb(179, 9, 88);
+}
