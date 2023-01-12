@@ -1,7 +1,8 @@
 .navbar {
     background-image: linear-gradient(to bottom left, #f47500ff, #9e4c00ff);
 
-    width: 5%;
+    min-width: 100px;
+    max-width: 100px;
     height: 100%;
     
     position: fixed;
@@ -11,7 +12,7 @@
     display: flex;
     flex-direction: column;
 
-    padding: 1.5%;
+    padding: 15px;
 
     --primary-color: black;
     --secondary-color: beige;
