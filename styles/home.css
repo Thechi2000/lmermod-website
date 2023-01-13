@@ -1,0 +1,16 @@
+#home {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#ferris {
+    width: 40%;
+}
+
+#home h1{
+    font-size: 3em;
+}
+#home h2 {
+    font-size: 2em;
+}
