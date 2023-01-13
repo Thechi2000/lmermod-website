@@ -33,3 +33,8 @@ a {
 .dark-theme a {
     color: rgb(179, 9, 88);
 }
+
+.horizontal-container {
+    display: flex;
+    flex-direction: row;
+}
