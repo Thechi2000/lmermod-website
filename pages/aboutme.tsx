@@ -5,6 +5,7 @@ import AboutMeSection from "../components/aboutme_section";
 
 import epfl_logo from "assets/epfl-logo.svg"
 import agep_logo from "assets/agep-logo.png"
+import clic_logo from "assets/clic-logo.svg"
 import rust_logo from "assets/rust-logo.svg"
 
 
@@ -38,7 +39,7 @@ export default function AboutMe(){
           
             <div className="separator" />
           
-            <AboutMeSection logo={{src: agep_logo, alt: 'CLIC'}} reversed={true}>
+            <AboutMeSection logo={{src: clic_logo, alt: 'CLIC'}} reversed={true}>
               <p>
                 &emsp;
                 Since autumn 2022, I am in the IT and Logistique/Event team of the <a href="https://clic.epfl.ch/" target="_blank">CLIC</a>, the student association of the IC faculty. 
