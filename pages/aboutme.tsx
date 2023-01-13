@@ -22,7 +22,6 @@ export default function AboutMe(){
               I study at the Swiss university <a href="https://www.epfl.ch" target="_blank">EPFL</a> since 2020. 
               I am taking the bachelor's degree in computer science, and currently in my third year of study.
               I also work for two student associations and as a teaching assistant.<br/>
-              <Link href="/aboutme/epfl">Learn&nbsp;more...</Link>
             </p>
           </AboutMeSection>
 
