@@ -25,9 +25,9 @@ export default function AboutMe(){
             </p>
           </AboutMeSection>
 
-          <div className="separator" />
-
           <div className="subsection">
+            <div className="separator" />
+
             <AboutMeSection logo={{src: agep_logo, alt: 'AGEPOLY'}} reversed={false}>
               <p>
                 &emsp;
