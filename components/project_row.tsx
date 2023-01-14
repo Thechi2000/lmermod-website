@@ -20,7 +20,7 @@ export default function ProjectRow({ project: { id, name, description, languages
         <tr key={id}>
             <td key="name">{
                 file == undefined && url == undefined
-                    ? <p>{name}</p>
+                    ? <a href={repository} target="_blank">{name}</a>
                     : <Link href={`/projects/${id}`}>{name}</Link>
             }
             </td>
@@ -28,7 +28,6 @@ export default function ProjectRow({ project: { id, name, description, languages
             <td key="description"><p>{description}</p></td>
             <td key="languages"><p>{languages.length == 0 ? 'None' : languages.join(', ')}</p></td>
             <td key="organization"><p>{organization || 'None'}</p></td>
-            <td key="repository">{repository == null ? <p>None</p> : <a href={repository}>Repo</a>}</td>
         </tr>
     )
 }
