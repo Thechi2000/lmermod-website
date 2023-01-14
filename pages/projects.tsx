@@ -12,17 +12,17 @@ export default function Projects({ projects }: { projects: Project[] }) {
         <p>My projects:</p>
 
         <table id="project-table">
+          <thead>
+            <tr>
+              <th key="name"><p>Name</p></th>
+              <th key="active"><p>Active</p></th>
+              <th key="description"><p>Description</p></th>
+              <th key="languages"><p>Languages</p></th>
+              <th key="organization"><p>Organization</p></th>
+              <th key="repository"><p>Repository</p></th>
+            </tr>
+          </thead>
           <tbody>
-            <thead>
-              <tr>
-                <th key="name"><p>Name</p></th>
-                <th key="active"><p>Active</p></th>
-                <th key="description"><p>Description</p></th>
-                <th key="languages"><p>Languages</p></th>
-                <th key="organization"><p>Organization</p></th>
-                <th key="repository"><p>Repository</p></th>
-              </tr>
-            </thead>
             {projects.map(p => <ProjectRow key={p.id} project={p} />)}
           </tbody>
         </table>
