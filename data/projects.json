@@ -1,0 +1,26 @@
+[
+    {
+        "id": "website",
+        "name": "Website",
+        "active": true,
+        "description": "My website",
+        "languages": [
+            "HTML",
+            "CSS",
+            "TypeScript"
+        ],
+        "repository": "https://www.github.com/Thechi2000/lmermod-website"
+    },
+    {
+        "id": "whiskey-api",
+        "name": "Whiskey API",
+        "active": true,
+        "description": "AGEPOLY Access Control API",
+        "languages": [
+            "Rust"
+        ],
+        "organization": "AGEPOLY",
+        "repository": "https://www.gitlab.com/agepoly/it/dev/whiskey-api",
+        "url": "https://gitlab.com/agepoly/it/dev/whiskey-api/-/raw/main/README.md"
+    }
+]
