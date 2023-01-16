@@ -10,11 +10,13 @@
     border-collapse: collapse;
 }
 
-#projects table, td {
+#projects table,
+#projects td {
     border: 1px solid white;
 }
 
-#projects th, td {
+#projects th,
+#projects td {
     padding: 0.5%;
     text-align: center;
 }
@@ -31,19 +33,22 @@
     align-items: center;
 }
 
-#project-md > * {
+#project-md>* {
     width: 60%;
 }
 
-#project-filters{
+#project-filters {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+
     align-items: center;
     justify-content: flex-start;
+
     width: 60%;
 }
 
-#project-filters > div{
+#project-filters>div {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -55,6 +60,7 @@
     height: fit-content;
     margin: 1%;
 }
+
 #project-filters * * {
     height: auto;
 }
