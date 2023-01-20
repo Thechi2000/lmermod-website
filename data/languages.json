@@ -43,5 +43,20 @@
         "name": "Python",
         "years": 2,
         "level": 2
+    },
+    {
+        "name": "Scala",
+        "years": 1.5,
+        "level": 2
+    },
+    {
+        "name": "Assembly",
+        "years": 2,
+        "level": 3
+    },
+    {
+        "name": "SQL",
+        "years": 1,
+        "level": 3
     }
 ]
