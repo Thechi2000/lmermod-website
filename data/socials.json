@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Github",
+        "username": "Thechi2000",
+        "link": "https://github.com/Thechi2000"
+    },
+    {
+        "name": "Gitlab",
+        "username": "Thechi2000",
+        "link": "https://gitlab.com/Thechi2000"
+    },
+    {
+        "name": "StackOverflow",
+        "username": "Thechi2000",
+        "link": "https://stackoverflow.com/users/12706308/thechi2000"
+    },
+    {
+        "name": "EPFL",
+        "username": "Ludovic Mermod",
+        "link": "https://people.epfl.ch/ludovic.mermod"
+    },
+    {
+        "name": "Telegram",
+        "username": "@lmermod",
+        "link": "https://t.me/lmermod"
+    },
+    {
+        "name": "Instagram",
+        "username": "@ludovic_mermod",
+        "link": "https://www.instagram.com/ludovic_mermod/"
+    },
+    {
+        "name": "Email",
+        "username": "ludovic.mermod@gmail.com",
+        "link": "mailto:ludovic.mermod@gmail.com"
+    }
+]
