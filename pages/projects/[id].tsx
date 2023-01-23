@@ -1,5 +1,6 @@
 import { readFileSync } from "fs";
 import { GetServerSidePropsContext, GetServerSidePropsResult } from "next";
+import { Head } from "next/document";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { Project } from "../../components/project_row";
 
@@ -10,22 +11,26 @@ interface ServerProps {
 
 export default function Render({ markdown, project: { name, active, description, languages, organization, repository } }: ServerProps) {
     return (
-        <div id="project-md">
-            <h1>Overview</h1>
-            <ul>
-                <li key="name">Name: {name}</li>
-                <li key="active">Active: {active ? 'Yes' : 'No'}</li>
-                <li key="description">Description: {description}</li>
-                <li key="languages">Languages: {languages.length == 0 ? 'None' : languages.join(', ')}</li>
-                <li key="organization">Organization: {organization || 'None'}</li>
-                <li key="repository">Repository: {repository == undefined ? <p>None</p> : <a href={repository}>{repository}</a>}</li>
-            </ul>
-            {
-                markdown != null
-                    ? <div className="markdown"><ReactMarkdown>{markdown}</ReactMarkdown></div>
-                    : <p>No full description is available</p>
-            }
-        </div>
+        <>
+            <Head>
+                <title>{name} - Ludovic Mermod</title>
+            </Head>
+            <div id="project-md">
+                <h1>Overview</h1>
+                <ul>
+                    <li key="name">Name: {name}</li>
+                    <li key="active">Active: {active ? 'Yes' : 'No'}</li>
+                    <li key="description">Description: {description}</li>
+                    <li key="languages">Languages: {languages.length == 0 ? 'None' : languages.join(', ')}</li>
+                    <li key="organization">Organization: {organization || 'None'}</li>
+                    <li key="repository">Repository: {repository == undefined ? <p>None</p> : <a href={repository}>{repository}</a>}</li>
+                </ul>
+                {
+                    markdown != null
+                        ? <div className="markdown"><ReactMarkdown>{markdown}</ReactMarkdown></div>
+                        : <p>No full description is available</p>
+                }
+            </div></>
     )
 }
 
