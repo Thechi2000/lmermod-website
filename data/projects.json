@@ -49,7 +49,7 @@
     },
     {
         "id": "telegram-bot",
-        "name": "Telgram Bot",
+        "name": "Telegram Bot",
         "active": false,
         "description": "Framework for Telegram bots",
         "languages": ["Rust"],
