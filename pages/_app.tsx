@@ -6,7 +6,11 @@ import 'styles/home.css'
 import 'styles/projects.css'
 import 'styles/competences.css'
 import 'styles/socials.css'
+import NavBar from '../components/navbar'
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (<>
+    <NavBar />
+    <Component {...pageProps} />
+  </>)
 }
