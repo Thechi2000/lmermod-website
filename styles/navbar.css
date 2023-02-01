@@ -1,8 +1,8 @@
 .navbar {
     background-image: linear-gradient(to bottom left, #f47500ff, #9e4c00ff);
 
-    min-width: 100px;
-    max-width: 100px;
+    min-width: 120px;
+    max-width: 120px;
     height: 100%;
     
     position: fixed;
