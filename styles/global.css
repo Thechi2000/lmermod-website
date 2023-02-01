@@ -1,9 +1,9 @@
 #__next {
-    width: 88%;
+    width: 100%;
 
     position: absolute;
-    left: 140px;
-    top: 0;
+    left: 0;
+    top: 80px;
 
     padding: 2%;
 
