@@ -20,7 +20,7 @@ export default function ProjectRow({ project: { id, name, description, languages
         <tr key={id}>
             <td key="name">{
                 file == undefined && url == undefined
-                    ? <a href={repository} target="_blank">{name}</a>
+                    ? <a href={repository} target="_blank" rel="noreferrer">{name}</a>
                     : <Link href={`/projects/${id}`}>{name}</Link>
             }
             </td>

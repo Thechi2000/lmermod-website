@@ -17,7 +17,7 @@ export default function Languages({ languages }: { languages: Language[] }) {
             <h2>Competences</h2>
             <p>Languages (with experience and expertise level)</p>
             <ul>
-              {languages.sort((a, b) => b.years - a.years || b.level - a.level || a.name.localeCompare(b.name)).map(l => <li><p>{l.name}: {l.years == 0 ? '< 1' : l.years.toString()} years ({l.level}/5)</p></li>)}
+              {languages.sort((a, b) => b.years - a.years || b.level - a.level || a.name.localeCompare(b.name)).map(l => <li key={l.name}><p>{l.name}: {l.years == 0 ? '< 1' : l.years.toString()} years ({l.level}/5)</p></li>)}
             </ul>
           </div>
         </>

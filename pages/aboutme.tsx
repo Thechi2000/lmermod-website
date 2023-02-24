@@ -19,8 +19,8 @@ export default function AboutMe(){
           <AboutMeSection logo={{src: epfl_logo, alt: 'EPFL'}} reversed={false}>
             <p>
               &emsp;
-              I study at the Swiss university <a href="https://www.epfl.ch" target="_blank">EPFL</a> since 2020. 
-              I am taking the bachelor's degree in computer science, and currently in my third year of study.
+              I study at the Swiss university <a href="https://www.epfl.ch" target="_blank" rel="noreferrer">EPFL</a> since 2020. 
+              I am taking the bachelor&apos;s degree in computer science, and currently in my third year of study.
               I also work for two student associations and as a teaching assistant.<br/>
             </p>
           </AboutMeSection>
@@ -31,7 +31,7 @@ export default function AboutMe(){
             <AboutMeSection logo={{src: agep_logo, alt: 'AGEPOLY'}} reversed={false}>
               <p>
                 &emsp;
-                I have been working at the <a href="https://agepoly.ch" target="_blank">AGEPOLY</a>, the general association of polytechnic students, since spring 2022 as part of the IT team, as a backend developper.
+                I have been working at the <a href="https://agepoly.ch" target="_blank" rel="noreferrer">AGEPOLY</a>, the general association of polytechnic students, since spring 2022 as part of the IT team, as a backend developper.
                 My main projects there are <Link href="/projects/agevote">AGEVoté</Link> and <Link href="/projects/whiskey">Whiskey</Link>.
               </p>
             </AboutMeSection>
@@ -41,7 +41,7 @@ export default function AboutMe(){
             <AboutMeSection logo={{src: clic_logo, alt: 'CLIC'}} reversed={true}>
               <p>
                 &emsp;
-                Since autumn 2022, I am in the IT and Logistique/Event team of the <a href="https://clic.epfl.ch/" target="_blank">CLIC</a>, the student association of the IC faculty. 
+                Since autumn 2022, I am in the IT and Logistique/Event team of the <a href="https://clic.epfl.ch/" target="_blank" rel="noreferrer">CLIC</a>, the student association of the IC faculty. 
                 I am building <Link href="/projects/reuform">Reuform</Link> and working in the team for their <Link href="/projects/clic-website">website</Link>.
               </p>
             </AboutMeSection>
@@ -51,7 +51,7 @@ export default function AboutMe(){
             <AboutMeSection reversed={false}>
               <p>
                 &emsp;
-                I am working as a teaching assistant for the <a href="https://edu.epfl.ch/coursebook/en/system-oriented-programming-CS-207" target="_blank">System oriented programming</a> and <a href="https://edu.epfl.ch/coursebook/en/system-programming-project-CS-212" target="_blank">System programming project</a>.
+                I am working as a teaching assistant for the <a href="https://edu.epfl.ch/coursebook/en/system-oriented-programming-CS-207" target="_blank" rel="noreferrer">System oriented programming</a> and <a href="https://edu.epfl.ch/coursebook/en/system-programming-project-CS-212" target="_blank" rel="noreferrer">System programming project</a>.
                 I also prepare the project for the next semester.
               </p>
             </AboutMeSection>
