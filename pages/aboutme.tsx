@@ -62,7 +62,7 @@ export default function AboutMe(){
             <p>
               &emsp;
               Over the years, I have been learning quite a few languages, the most important being Rust, C/C++ and Java.
-              Get a full overview <Link href="/aboutme/competences">here</Link>.
+              Get a full overview <Link href="/skills">here</Link>.
             </p>
           </AboutMeSection>
         </div>
