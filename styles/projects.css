@@ -43,6 +43,9 @@
 
     align-items: center;
     justify-content: flex-start;
+    
+    padding: 0.5%;
+    gap: 1%;
 
     width: 60%;
 }
@@ -52,12 +55,16 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    width: 20%;
+}
+
+#project-filters>div>* {
+    width: 100%;
 }
 
 
 #project-filters * {
     height: fit-content;
-    margin: 1%;
 }
 
 #project-filters * * {

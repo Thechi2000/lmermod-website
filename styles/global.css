@@ -32,3 +32,68 @@ a {
     display: flex;
     flex-direction: row;
 }
+
+.checkbox-dropdown {
+    border: 1px solid #aaa;
+    position: relative;
+
+    user-select: none;
+}
+
+.checkbox-dropdown-list {
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+ 
+    border: inherit;
+    border-top: none;
+
+    position: absolute;
+    
+    top: 100%;
+    left: -1px;
+    
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+ 
+    overflow-y: scroll;
+    pointer-events: none;
+}
+
+.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.checkbox-dropdown-list li label {
+    padding: 3px 10px 3px 10px;
+    white-space: nowrap;
+    transition: all 0.2s ease-out;
+
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+
+.checkbox-dropdown:after {
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0;
+    border: 6px solid transparent;
+    border-top-color: #000;
+    top: 50%;
+    right: 10px;
+    margin-top: -3px;
+}
+
+.checkbox-dropdown.is-active:after {
+    border-bottom-color: #000;
+    border-top-color: #fff;
+    margin-top: -9px;
+}
+
+.checkbox-dropdown-list li label:hover {
+    background-color: rgb(51 65 85);
+    color: white;
+}

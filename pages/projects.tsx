@@ -4,6 +4,7 @@ import { useState } from "react";
 import ReactSelect, { components } from "react-select";
 import Select from "react-select";
 import ProjectRow, { Project } from "../components/project_row";
+import Dropdown, { DropdownElement } from "../components/dropdown";
 
 interface ProjectFilters {
   string: string | null,
@@ -25,21 +26,6 @@ export default function Projects({ projects }: { projects: Project[] }) {
     })
   }
 
-  function Option(props: any) {
-    return (
-      <div key={props.label}>
-        <components.Option {...props}>
-          <input
-            type="checkbox"
-            checked={props.isSelected}
-            onChange={() => null}
-          />{" "}
-          <label>{props.label}</label>
-        </components.Option>
-      </div>
-    );
-  }
-
   return (
     <>
       <Head>
@@ -49,38 +35,52 @@ export default function Projects({ projects }: { projects: Project[] }) {
         <div id="project-filters">
           <p>Filters:</p>
 
-          <input placeholder='Search...' onChange={e => updateFilters({ string: e.target.value })} />
+          <input placeholder='Search...' onChange={e => updateFilters({ string: e.target.value })} className="border-gray-400 border-solid border bg-slate-800 p-3 m-0" />
 
           <div>
-            <label>Active:</label>
-            <select onChange={e => updateFilters({ active: JSON.parse(e.target.value) })}>
-              <option defaultChecked value="null">No filter</option>
-              <option value="true">Active</option>
-              <option value="false">Inactive</option>
-            </select>
+            <Dropdown label="Language">
+              {
+                languages.map(l => <DropdownElement key={l} >
+                  <label>
+                    <input type="checkbox" value={l} name="language" onChange={(e) => {
+                      var filt = [...(filters.languages || [])]
+                      if (e.target.checked) {
+                        filt.push(l)
+                      } else {
+                        filt.splice(filt.indexOf(l), 1)
+                      }
+                      console.log(filt)
+                      updateFilters({ languages: filt })
+                    }} />
+                    {l}
+                  </label>
+                </DropdownElement>)
+              }
+            </Dropdown>
           </div>
 
-
           <div>
-            <label>Languages:</label>
-            <ReactSelect
-              options={languages.map(l => { return { value: l, label: l } })}
-              onChange={e => updateFilters({ languages: e.map(p => p.label) })}
-              isMulti
-              closeMenuOnSelect={false}
-              hideSelectedOptions={false}
-              components={{ Option }}
-              className="react-select"
-            />
+            <Dropdown label="Activity">
+              <DropdownElement><label onClick={() => updateFilters({ active: null })}><input type="radio" checked={filters.active == null} readOnly />No filter</label></DropdownElement>
+              <DropdownElement><label onClick={() => updateFilters({ active: true })}><input type="radio" checked={filters.active === true} readOnly />Active</label></DropdownElement>
+              <DropdownElement><label onClick={() => updateFilters({ active: false })}><input type="radio" checked={filters.active === false} readOnly />Inactive</label></DropdownElement>
+            </Dropdown>
           </div>
 
           <div>
-            <label>Organization:</label>
-            <select onChange={e => updateFilters({ organization: JSON.parse(e.target.value) })}>
-              <option defaultChecked value="null" >No filter</option>
-              <option value='""'>None</option>
-              {projects.map(p => p.organization).reduce((acc, val) => val != undefined && acc.includes(val) ? acc : [...acc, val as string], [] as string[]).filter(o => o != undefined && o.length > 0).map(o => (<option value={`"${o}"`} key={o}>{o}</option>))}
-            </select>
+            <Dropdown label="Organization">
+              <DropdownElement><label onClick={() => updateFilters({ organization: null })}><input type="radio" checked={filters.organization == null} readOnly />No filter</label></DropdownElement>
+              {
+                projects.map(p => p.organization)
+                  .reduce((acc, val) => val != undefined && acc.includes(val) ? acc : [...acc, val as string], [] as string[])
+                  .filter(o => o != undefined && o.length > 0)
+                  .map(o =>
+                    <DropdownElement key={o}><label onClick={() => updateFilters({ organization: o })}>
+                      <input type="radio" key={o} checked={filters.organization === o} readOnly />{o}</label>
+                    </DropdownElement>
+                  ) as any
+              }
+            </Dropdown>
           </div>
         </div>
 
@@ -95,11 +95,11 @@ export default function Projects({ projects }: { projects: Project[] }) {
             </tr>
           </thead>
           <colgroup>
-            <col style={{width: '15%'}} />
-            <col style={{width: '5%'}} />
-            <col style={{width: '40%'}} />
-            <col style={{width: '25%'}} />
-            <col style={{width: '15%'}} />
+            <col style={{ width: '15%' }} />
+            <col style={{ width: '5%' }} />
+            <col style={{ width: '40%' }} />
+            <col style={{ width: '25%' }} />
+            <col style={{ width: '15%' }} />
           </colgroup>
           <tbody>
             {projects.filter(p => {
