@@ -89,7 +89,7 @@ export default function Dropdown({ children, label }: { children: JSX.Element | 
         <>
             <div ref={drop} className="checkbox-dropdown p-3 bg-slate-800" onClick={() => setActive(!active())}>
                 {label}
-                <ul ref={options} className="checkbox-dropdown-list bg-slate-800" style={{ width: width + "px" }}>
+                <ul ref={options} className="checkbox-dropdown-list bg-slate-800" style={{ width: width - 4 + "px" }}>
                     {children}
                 </ul>
             </div>

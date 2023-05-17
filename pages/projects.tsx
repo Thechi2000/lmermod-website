@@ -33,8 +33,6 @@ export default function Projects({ projects }: { projects: Project[] }) {
       </Head>
       <div id="projects">
         <div id="project-filters">
-          <p>Filters:</p>
-
           <input placeholder='Search...' onChange={e => updateFilters({ string: e.target.value })} className="border-gray-400 border-solid border bg-slate-800 p-3 m-0" />
 
           <div>
