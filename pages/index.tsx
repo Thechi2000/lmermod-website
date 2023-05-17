@@ -9,13 +9,15 @@ export default function Home() {
       <Head>
         <title>Home - Ludovic Mermod</title>
       </Head>
-      <div id="home" className="flex pt-8 space-x-10 ">
+      <div id='home'>
         <div>
           <h1>Welcome to my website&nbsp;!</h1>
           <h2>Ludovic Mermod</h2>
         </div>
 
+        <div>
           <Image id='ferris' src={ferris} alt='ferris' />
+        </div>
       </div>
     </>
   )
