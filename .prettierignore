@@ -1,4 +1,5 @@
 .github
 .next
+.husky
 assets
 node_modules
