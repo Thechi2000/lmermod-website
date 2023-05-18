@@ -37,7 +37,7 @@
     align-items: center;
 }
 
-#project-md>* {
+#project-md > * {
     width: 60%;
 }
 
@@ -55,7 +55,7 @@
     width: 60%;
 }
 
-#project-filters>div {
+#project-filters > div {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -63,10 +63,9 @@
     width: 20%;
 }
 
-#project-filters>div>* {
+#project-filters > div > * {
     width: 100%;
 }
-
 
 #project-filters * {
     height: fit-content;
