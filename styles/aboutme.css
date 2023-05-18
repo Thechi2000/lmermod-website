@@ -1,8 +1,5 @@
 #aboutme {
-    margin: 2% 15%;
-    width: 70%;
-    height: fit-content;
-
+    margin: 2rem 10vw;
     display: flex;
     flex-direction: column;
 }
@@ -10,24 +7,24 @@
 #aboutme section {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-}
-
-#aboutme .subsection{
-    margin: 2% 15%;
-    width: 70%;
-    height: fit-content;
+    row-gap: 2em;
+    column-gap: 4em;
+    justify-content: center;
 }
 
 #aboutme section .description {
     width: 50%;
     text-align: justify;
+    line-height: 1.75em;
+    font-size: 1.1em;
 }
 
 #aboutme section .logo {
-    width: 20%;
-    height: max-content;
+    height: 10em;
+    width: fit-content;
+    max-width: min(20em, 60vw);
 }
 
 #aboutme .separator {
@@ -36,7 +33,7 @@
     background-color: rgb(88, 88, 88);
 
     height: 2px;
-    width: 90%;
+    width: 60vw;
 
     align-self: center;
 }
