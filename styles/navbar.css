@@ -26,6 +26,10 @@
     color: rgb(229 229 229);
 }
 
+.navbar-item p {
+    margin: 0;
+}
+
 .navbar-item:hover {
     color: rgb(245 245 245);
     background-color: rgb(194 65 12);
