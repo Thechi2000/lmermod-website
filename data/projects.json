@@ -1,78 +1,68 @@
 [
-    {
-        "id": "website",
-        "name": "Website",
-        "active": true,
-        "description": "My website",
-        "languages": [
-            "HTML",
-            "CSS",
-            "TypeScript"
-        ],
-        "repository": "https://www.github.com/Thechi2000/lmermod-website",
-        "url": "https://raw.githubusercontent.com/Thechi2000/lmermod-website/main/README.md"
-    },
-    {
-        "id": "whiskey-api",
-        "name": "Whiskey API",
-        "active": true,
-        "description": "API for Access Control of AGEPOLY",
-        "languages": [
-            "Rust"
-        ],
-        "organization": "AGEPOLY",
-        "repository": "https://www.gitlab.com/agepoly/it/dev/whiskey-api",
-        "url": "https://gitlab.com/agepoly/it/dev/whiskey-api/-/raw/main/README.md"
-    },
-    {
-        "id": "pps",
-        "name": "CS212",
-        "active": true,
-        "description": "Project Programmation Système 2023",
-        "languages": [
-            "C",
-            "Makefile",
-            "Python"
-        ],
-        "organization": "EPFL",
-        "repository": "https://edu.epfl.ch/studyplan/fr/bachelor/informatique/coursebook/projet-programmation-systeme-CS-212"
-    },
-    {
-        "id": "agevote-api",
-        "name": "AGEVoté API",
-        "active": false,
-        "description": "API for online voting system of AGEPOLY",
-        "languages": ["Rust"],
-        "organization": "AGEPOLY",
-        "repository": "https://gitlab.com/agepoly/it/dev/agevote/-/tree/main/agevote-backend",
-        "url": "https://gitlab.com/agepoly/it/dev/agevote/-/raw/main/agevote-backend/README.md"
-    },
-    {
-        "id": "telegram-bot",
-        "name": "Telegram Bot",
-        "active": false,
-        "description": "Framework for Telegram bots",
-        "languages": ["Rust"],
-        "repository": "https://gitlab.com/Thechi2000/telegram-bot2/",
-        "url": "https://gitlab.com/Thechi2000/telegram-bot2/-/raw/master/README.md"
-    },
-    {
-        "id": "reuform-api",
-        "name": "Reuform API",
-        "active": true,
-        "description": "API for online forms of CLIC",
-        "languages": ["Rust"],
-        "organization": "CLIC",
-        "repository": "https://github.com/DeepGreen1/Reuform/tree/backend-refactor/backend",
-        "url": "https://raw.githubusercontent.com/DeepGreen1/Reuform/backend-refactor/backend/README.md?token=GHSAT0AAAAAAB4YW7QAQCFEBMUBKX5D6XAUY6EBHCQ"
-    },
-    {
-        "id": "clic-website-v2",
-        "name": "CLIC Website V2",
-        "active": true,
-        "description": "New website for CLIC",
-        "languages": ["HTML", "CSS", "TypeScript"],
-        "organization": "CLIC",
-        "repository": "https://github.com/clicepfl/clic-website-v2/"
-    }
+  {
+    "id": "website",
+    "name": "Website",
+    "active": true,
+    "description": "My website",
+    "languages": ["HTML", "CSS", "TypeScript"],
+    "repository": "https://www.github.com/Thechi2000/lmermod-website",
+    "url": "https://raw.githubusercontent.com/Thechi2000/lmermod-website/main/README.md"
+  },
+  {
+    "id": "whiskey-api",
+    "name": "Whiskey API",
+    "active": true,
+    "description": "API for Access Control of AGEPOLY",
+    "languages": ["Rust"],
+    "organization": "AGEPOLY",
+    "repository": "https://www.gitlab.com/agepoly/it/dev/whiskey-api",
+    "url": "https://gitlab.com/agepoly/it/dev/whiskey-api/-/raw/main/README.md"
+  },
+  {
+    "id": "pps",
+    "name": "CS212",
+    "active": true,
+    "description": "Project Programmation Système 2023",
+    "languages": ["C", "Makefile", "Python"],
+    "organization": "EPFL",
+    "repository": "https://edu.epfl.ch/studyplan/fr/bachelor/informatique/coursebook/projet-programmation-systeme-CS-212"
+  },
+  {
+    "id": "agevote-api",
+    "name": "AGEVoté API",
+    "active": false,
+    "description": "API for online voting system of AGEPOLY",
+    "languages": ["Rust"],
+    "organization": "AGEPOLY",
+    "repository": "https://gitlab.com/agepoly/it/dev/agevote/-/tree/main/agevote-backend",
+    "url": "https://gitlab.com/agepoly/it/dev/agevote/-/raw/main/agevote-backend/README.md"
+  },
+  {
+    "id": "telegram-bot",
+    "name": "Telegram Bot",
+    "active": false,
+    "description": "Framework for Telegram bots",
+    "languages": ["Rust"],
+    "repository": "https://gitlab.com/Thechi2000/telegram-bot2/",
+    "url": "https://gitlab.com/Thechi2000/telegram-bot2/-/raw/master/README.md"
+  },
+  {
+    "id": "reuform-api",
+    "name": "Reuform API",
+    "active": true,
+    "description": "API for online forms of CLIC",
+    "languages": ["Rust"],
+    "organization": "CLIC",
+    "repository": "https://github.com/DeepGreen1/Reuform/tree/backend-refactor/backend",
+    "url": "https://raw.githubusercontent.com/DeepGreen1/Reuform/backend-refactor/backend/README.md?token=GHSAT0AAAAAAB4YW7QAQCFEBMUBKX5D6XAUY6EBHCQ"
+  },
+  {
+    "id": "clic-website-v2",
+    "name": "CLIC Website V2",
+    "active": true,
+    "description": "New website for CLIC",
+    "languages": ["HTML", "CSS", "TypeScript"],
+    "organization": "CLIC",
+    "repository": "https://github.com/clicepfl/clic-website-v2/"
+  }
 ]

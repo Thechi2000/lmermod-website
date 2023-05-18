@@ -6,7 +6,7 @@
     --background-color: white;
     --color: black;
 
-    font-family: 'DejaVu Sans';
+    font-family: "DejaVu Sans";
 }
 
 :root .dark-theme {
@@ -41,18 +41,18 @@ a {
     list-style: none;
     margin: 0;
     padding: 5px;
- 
+
     border: inherit;
     border-top: none;
 
     position: absolute;
-    
+
     top: 100%;
     left: 1px;
-    
+
     opacity: 0;
     transition: opacity 0.4s ease-in-out;
- 
+
     overflow-y: scroll;
     pointer-events: none;
 }
@@ -73,7 +73,7 @@ a {
 }
 
 .checkbox-dropdown:after {
-    content: '';
+    content: "";
     height: 0;
     position: absolute;
     width: 0;
