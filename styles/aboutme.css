@@ -37,3 +37,13 @@
 
     align-self: center;
 }
+
+@media (max-width: 1000px) {
+    #aboutme section .description {
+        width: auto;
+    }
+
+    #aboutme .separator {
+        width: 90vw;
+    }
+}
