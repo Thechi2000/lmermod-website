@@ -1,6 +1,6 @@
 #navbar {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
 
     align-items: center;
@@ -11,6 +11,12 @@
     padding: 1.25rem 1.25rem 1.25rem 2rem;
 
     white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+    #navbar {
+        justify-content: center;
+    }
 }
 
 .navbar-item {
