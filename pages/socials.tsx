@@ -28,10 +28,10 @@ export default function Socials({ medias }: { medias: { name: string; username: 
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   return {
     props: {
-      medias: JSON.parse(readFileSync("data/socials.json", "utf8").toString()),
+      medias: await fetch("https://lmermod.ch/data/socials.json").then((p) => p.json()),
     },
   };
 }

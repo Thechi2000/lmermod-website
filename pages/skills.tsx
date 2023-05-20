@@ -47,10 +47,10 @@ export default function Skills({ skills }: { skills: Skills }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   return {
     props: {
-      skills: JSON.parse(readFileSync("data/skills.json", "utf8").toString()),
+      skills: await fetch("https://lmermod.ch/data/skills.json").then((p) => p.json()),
     },
   };
 }

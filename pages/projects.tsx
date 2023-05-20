@@ -182,10 +182,10 @@ export default function Projects({ projects }: { projects: Project[] }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   return {
     props: {
-      projects: JSON.parse(readFileSync("data/projects.json", "utf8").toString()),
+      projects: await fetch("https://lmermod.ch/data/projects.json").then((p) => p.json()),
     },
   };
 }
