@@ -89,9 +89,17 @@ export default function Dropdown({
 
   return (
     <>
-      <div ref={drop} className="checkbox-dropdown p-3 bg-slate-800" onClick={() => setActive(!active())}>
+      <div ref={drop} className="checkbox-dropdown" onClick={() => setActive(!active())}>
         {label}
-        <ul ref={options} className="checkbox-dropdown-list bg-slate-800" style={{ width: width - 4 + "px" }}>
+        <ul
+          ref={options}
+          className="checkbox-dropdown-list"
+          style={{
+            maxWidth: "calc(" + width + "px - 0.5rem)",
+            width: "calc(" + width + "px - 0.5rem)",
+            minWidth: "calc(" + width + "px - 0.5rem)",
+          }}
+        >
           {children}
         </ul>
       </div>

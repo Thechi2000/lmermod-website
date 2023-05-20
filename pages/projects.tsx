@@ -126,55 +126,57 @@ export default function Projects({ projects }: { projects: Project[] }) {
           </div>
         </div>
 
-        <table id="project-table">
-          <thead>
-            <tr>
-              <th key="name">
-                <p>Name</p>
-              </th>
-              <th key="active">
-                <p>Active</p>
-              </th>
-              <th key="description">
-                <p>Description</p>
-              </th>
-              <th key="languages">
-                <p>Languages</p>
-              </th>
-              <th key="organization">
-                <p>Organization</p>
-              </th>
-            </tr>
-          </thead>
-          <colgroup>
-            <col style={{ width: "15%" }} />
-            <col style={{ width: "5%" }} />
-            <col style={{ width: "40%" }} />
-            <col style={{ width: "25%" }} />
-            <col style={{ width: "15%" }} />
-          </colgroup>
-          <tbody>
-            {projects
-              .filter((p) => {
-                return (
-                  (filters.string == null ||
-                    filters.string.length == 0 ||
-                    p.name.toLowerCase().includes(filters.string.toLowerCase()) ||
-                    p.description.toLowerCase().includes(filters.string.toLowerCase())) &&
-                  (filters.active == null || filters.active == p.active) &&
-                  (filters.languages == null ||
-                    filters.languages.length == 0 ||
-                    filters.languages.every((l) => p.languages.includes(l))) &&
-                  (filters.organization == null ||
-                    (filters.organization == "" && p.organization == null) ||
-                    filters.organization == p.organization)
-                );
-              })
-              .map((p) => (
-                <ProjectRow key={p.id} project={p} />
-              ))}
-          </tbody>
-        </table>
+        <div className="project-table-container">
+          <table id="project-table">
+            <thead>
+              <tr>
+                <th key="name">
+                  <p>Name</p>
+                </th>
+                <th key="active">
+                  <p>Active</p>
+                </th>
+                <th key="description">
+                  <p>Description</p>
+                </th>
+                <th key="languages">
+                  <p>Languages</p>
+                </th>
+                <th key="organization">
+                  <p>Organization</p>
+                </th>
+              </tr>
+            </thead>
+            <colgroup>
+              <col style={{ width: "15%" }} />
+              <col style={{ width: "5%" }} />
+              <col style={{ width: "40%" }} />
+              <col style={{ width: "25%" }} />
+              <col style={{ width: "15%" }} />
+            </colgroup>
+            <tbody>
+              {projects
+                .filter((p) => {
+                  return (
+                    (filters.string == null ||
+                      filters.string.length == 0 ||
+                      p.name.toLowerCase().includes(filters.string.toLowerCase()) ||
+                      p.description.toLowerCase().includes(filters.string.toLowerCase())) &&
+                    (filters.active == null || filters.active == p.active) &&
+                    (filters.languages == null ||
+                      filters.languages.length == 0 ||
+                      filters.languages.every((l) => p.languages.includes(l))) &&
+                    (filters.organization == null ||
+                      (filters.organization == "" && p.organization == null) ||
+                      filters.organization == p.organization)
+                  );
+                })
+                .map((p) => (
+                  <ProjectRow key={p.id} project={p} />
+                ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </>
   );
