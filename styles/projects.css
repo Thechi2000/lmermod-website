@@ -27,9 +27,13 @@
 
 #projects th,
 #projects td {
-    padding: 5px 7px 5px 7px;
+    padding: 0.2em 1.5em;
     text-align: center;
     white-space: nowrap;
+}
+
+#projects th {
+    padding: 0.2em 1.5em;
 }
 
 #projects tr {
