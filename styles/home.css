@@ -7,12 +7,12 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-    padding-top: 2em;
-    gap: 2em;
+    padding: 2em 0;
 }
 
 #ferris {
     width: 30em;
+    height: auto;
 }
 
 #home h1 {
