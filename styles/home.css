@@ -12,6 +12,7 @@
 
 #ferris {
     width: 30em;
+    max-width: 100%;
     height: auto;
 }
 
