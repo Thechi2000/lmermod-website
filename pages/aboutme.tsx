@@ -3,10 +3,10 @@ import Link from "next/link";
 
 import AboutMeSection from "../components/aboutme_section";
 
-import epfl_logo from "assets/epfl-logo.svg";
-import agep_logo from "assets/agepoly-logo.svg";
-import clic_logo from "assets/clic-logo.svg";
-import rust_logo from "assets/rust-logo.svg";
+import EpflLogo from "assets/epfl-logo.svg";
+import AgepolyLogo from "assets/agepoly-logo.svg";
+import ClicLogo from "assets/clic-logo.svg";
+import RustLogo from "assets/rust-logo.svg";
 
 export default function AboutMe() {
   return (
@@ -15,21 +15,21 @@ export default function AboutMe() {
         <title>Home - Ludovic Mermod</title>
       </Head>
       <div id="aboutme">
-        <AboutMeSection logo={{ src: epfl_logo, alt: "EPFL" }}>
+        <AboutMeSection logo={<EpflLogo />}>
           <p>
             &emsp; I study at the Swiss university{" "}
             <a href="https://www.epfl.ch" target="_blank" rel="noreferrer">
               EPFL
-            </a>{" "}
-            since 2020. I am taking the bachelor&apos;s degree in computer science, and currently in my third year of
-            study. I also work for two student associations and as a teaching assistant.
+            </a>
+            &nbsp;since 2020. I am taking the bachelor&apos;s degree in computer science, and currently in my third year
+            of study. I also work for two student associations and as a teaching assistant.
             <br />
           </p>
         </AboutMeSection>
 
         <div className="separator" />
 
-        <AboutMeSection logo={{ src: agep_logo, alt: "AGEPOLY" }}>
+        <AboutMeSection logo={<AgepolyLogo />}>
           <p>
             &emsp; I have been working at the{" "}
             <a href="https://agepoly.ch" target="_blank" rel="noreferrer">
@@ -43,7 +43,7 @@ export default function AboutMe() {
 
         <div className="separator" />
 
-        <AboutMeSection logo={{ src: clic_logo, alt: "CLIC" }}>
+        <AboutMeSection logo={<ClicLogo />}>
           <p>
             &emsp; Since autumn 2022, I am in the IT and Logistique/Event team of the{" "}
             <a href="https://clic.epfl.ch/" target="_blank" rel="noreferrer">
@@ -80,7 +80,7 @@ export default function AboutMe() {
 
         <div className="separator" />
 
-        <AboutMeSection logo={{ src: rust_logo, alt: "Rust" }}>
+        <AboutMeSection logo={<RustLogo />}>
           <p>
             &emsp; Over the years, I have been learning quite a few languages, the most important being Rust, C/C++ and
             Java. Get a full overview <Link href="/skills">here</Link>.

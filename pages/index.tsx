@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 
-import ferris from "assets/ferris-gesture.svg";
+import Ferris from "assets/ferris-gesture.svg";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
         </div>
 
         <div>
-          <Image id="ferris" src={ferris} alt="ferris" />
+          <Ferris id={"ferris"} />
         </div>
       </div>
     </>

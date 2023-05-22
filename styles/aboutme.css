@@ -21,9 +21,9 @@
     font-size: 1.1em;
 }
 
-#aboutme section .logo {
+#aboutme section svg {
     height: 10em;
-    width: fit-content;
+    width: auto;
     max-width: min(20em, 60vw);
 }
 

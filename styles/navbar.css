@@ -4,7 +4,7 @@
     flex-direction: row;
 
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 
     background-color: rgb(154 52 18);
 
@@ -29,7 +29,7 @@
 
     font-size: 0.875rem;
     line-height: 1.25rem;
-    color: rgb(229 229 229);
+    color: var(--color);
 }
 
 .navbar-item p {
@@ -37,11 +37,9 @@
 }
 
 .navbar-item:hover {
-    color: rgb(245 245 245);
-    background-color: rgb(194 65 12);
+    background-color: #00000020;
 }
 
 .current-navbar-item {
-    background-color: rgb(124 45 18);
-    color: rgb(245 245 245);
+    background-color: #00000038;
 }

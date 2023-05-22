@@ -6,11 +6,12 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 2em;
 
-    padding: 2em 0;
+    padding: 2em;
 }
 
-#ferris {
+#home svg {
     width: 30em;
     max-width: 100%;
     height: auto;

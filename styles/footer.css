@@ -1,9 +1,8 @@
 footer {
-    background-color: #606060;
-
     max-width: 100%;
 
     display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -11,7 +10,11 @@ footer {
     padding: 1.5rem;
 }
 
-footer > div {
+footer a {
+    color: var(--color);
+}
+
+.footer-link-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -19,7 +22,7 @@ footer > div {
     gap: 0.5rem;
 }
 
-footer img {
+footer svg {
     max-width: 2rem;
     max-height: 2rem;
     width: 2rem;
