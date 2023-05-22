@@ -9,13 +9,14 @@ import "styles/home.css";
 import "styles/footer.css";
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
+import { ThemeProvider } from "next-themes";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <ThemeProvider>
       <NavBar />
       <Component {...pageProps} />
       <Footer />
-    </>
+    </ThemeProvider>
   );
 }

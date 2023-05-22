@@ -18,7 +18,7 @@ export default function AboutMe() {
         <AboutMeSection logo={<EpflLogo />}>
           <p>
             &emsp; I study at the Swiss university{" "}
-            <a href="https://www.epfl.ch" target="_blank" rel="noreferrer">
+            <a href="https://www.epfl.ch" rel="noopener noreferrer nofollow" target="_blank">
               EPFL
             </a>
             &nbsp;since 2020. I am taking the bachelor&apos;s degree in computer science, and currently in my third year
@@ -32,7 +32,7 @@ export default function AboutMe() {
         <AboutMeSection logo={<AgepolyLogo />}>
           <p>
             &emsp; I have been working at the{" "}
-            <a href="https://agepoly.ch" target="_blank" rel="noreferrer">
+            <a href="https://agepoly.ch" rel="noopener noreferrer nofollow" target="_blank">
               AGEPOLY
             </a>
             , the general association of polytechnic students, since spring 2022 as part of the IT team, as a backend
@@ -46,7 +46,7 @@ export default function AboutMe() {
         <AboutMeSection logo={<ClicLogo />}>
           <p>
             &emsp; Since autumn 2022, I am in the IT and Logistique/Event team of the{" "}
-            <a href="https://clic.epfl.ch/" target="_blank" rel="noreferrer">
+            <a href="https://clic.epfl.ch/" rel="noopener noreferrer nofollow" target="_blank">
               CLIC
             </a>
             , the student association of the IC faculty. I am building <Link href="/projects/reuform">Reuform</Link> and
@@ -61,16 +61,14 @@ export default function AboutMe() {
             &emsp; I am working as a teaching assistant for the{" "}
             <a
               href="https://edu.epfl.ch/coursebook/en/system-oriented-programming-CS-207"
-              target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer nofollow" target="_blank"
             >
               System oriented programming
             </a>{" "}
             and{" "}
             <a
               href="https://edu.epfl.ch/coursebook/en/system-programming-project-CS-212"
-              target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer nofollow" target="_blank"
             >
               System programming project
             </a>

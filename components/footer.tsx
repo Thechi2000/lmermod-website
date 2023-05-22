@@ -9,7 +9,7 @@ export default function Footer() {
     <footer>
       <a href="https://github.com/Thechi2000" target="_blank">
         <div className="footer-link-content">
-          <GithubLogo fill={"white"} />
+          <GithubLogo fill={"var(--color)"} />
           Github
         </div>
       </a>

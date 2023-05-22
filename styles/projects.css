@@ -15,7 +15,7 @@
 
 #projects table,
 #projects td {
-    border: 1px solid white;
+    border: 1px solid var(--border);
 }
 
 .project-table-container {

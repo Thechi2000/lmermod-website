@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
 
-    background-color: rgb(154 52 18);
+    background-color: var(--navbar-background-color);
 
     padding: 1.25rem 1.25rem 1.25rem 2rem;
 
@@ -29,7 +29,8 @@
 
     font-size: 0.875rem;
     line-height: 1.25rem;
-    color: var(--color);
+
+    color: var(--navbar-color);
 }
 
 .navbar-item p {
@@ -42,4 +43,15 @@
 
 .current-navbar-item {
     background-color: #00000038;
+}
+
+#theme-button {
+    margin-left: 1rem;
+    width: 3rem;
+    height: auto;
+    transition-duration: 0.5s;
+}
+
+#theme-button.light {
+    transform: rotate3d(0, 0, 1, 180deg);
 }
