@@ -7,6 +7,7 @@ import EpflLogo from "assets/epfl-logo.svg";
 import AgepolyLogo from "assets/agepoly-logo.svg";
 import ClicLogo from "assets/clic-logo.svg";
 import RustLogo from "assets/rust-logo.svg";
+import CLogo from "assets/c-logo.svg";
 
 export default function AboutMe() {
   return (
@@ -56,7 +57,7 @@ export default function AboutMe() {
 
         <div className="separator" />
 
-        <AboutMeSection>
+        <AboutMeSection logo={<CLogo />}>
           <p>
             &emsp; I am working as a teaching assistant for the{" "}
             <a
