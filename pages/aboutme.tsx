@@ -61,14 +61,16 @@ export default function AboutMe() {
             &emsp; I am working as a teaching assistant for the{" "}
             <a
               href="https://edu.epfl.ch/coursebook/en/system-oriented-programming-CS-207"
-              rel="noopener noreferrer nofollow" target="_blank"
+              rel="noopener noreferrer nofollow"
+              target="_blank"
             >
               System oriented programming
             </a>{" "}
             and{" "}
             <a
               href="https://edu.epfl.ch/coursebook/en/system-programming-project-CS-212"
-              rel="noopener noreferrer nofollow" target="_blank"
+              rel="noopener noreferrer nofollow"
+              target="_blank"
             >
               System programming project
             </a>

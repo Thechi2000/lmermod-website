@@ -21,15 +21,17 @@
     font-size: 1.1em;
 }
 
+.description p {
+    margin: 0;
+}
+
 #aboutme section svg {
     height: 10em;
     width: auto;
     max-width: min(20em, 60vw);
 }
 
-#aboutme .separator {
-    margin: 2% 0;
-
+.separator {
     background-color: rgb(88, 88, 88);
 
     height: 2px;

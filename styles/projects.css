@@ -66,25 +66,24 @@
     width: 60%;
 }
 
+#project-filters > * {
+    min-width: 10em;
+    width: 12rem;
+    height: 100%;
+}
+
+#project-filters > input {
+    padding: 0.75em;
+}
+
 #project-filters > div {
     display: flex;
     flex-direction: row;
 
     align-items: center;
     justify-content: center;
-
-    width: 12rem;
-    min-width: 10rem;
 }
 
 #project-filters > div > * {
     width: 100%;
-}
-
-#project-filters * {
-    height: fit-content;
-}
-
-#project-filters * * {
-    height: auto;
 }

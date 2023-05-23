@@ -47,11 +47,16 @@
 
 #theme-button {
     margin-left: 1rem;
-    width: 3rem;
+    width: 2.5rem;
     height: auto;
     transition-duration: 0.5s;
 }
 
 #theme-button.light {
     transform: rotate3d(0, 0, 1, 180deg);
+    fill: white;
+}
+
+#theme-button.dark {
+    fill: black;
 }

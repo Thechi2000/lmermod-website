@@ -30,6 +30,7 @@ export default function Render({
             Repository: {repository == undefined ? <p>None</p> : <a href={repository}>{repository}</a>}
           </li>
         </ul>
+        <div className="separator" />
         {markdown != null ? (
           <div className="markdown">
             <ReactMarkdown>{markdown}</ReactMarkdown>

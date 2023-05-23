@@ -65,7 +65,7 @@ export default function Dropdown({
       // we also instantiate the resizeObserver and we pass
       // the event handler to the constructor
       const resizeObserver = new ResizeObserver(() => {
-        if ((drop.current as unknown as HTMLUListElement).offsetWidth !== width) {
+        if (drop.current && (drop.current as unknown as HTMLUListElement).offsetWidth !== width) {
           console.log("update from drop");
           setWidth((drop.current as unknown as HTMLUListElement).offsetWidth);
         }

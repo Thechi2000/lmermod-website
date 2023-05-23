@@ -48,6 +48,29 @@ export default function Projects({ projects }: { projects: Project[] }) {
           />
 
           <div>
+            <Dropdown label="Activity">
+              <DropdownElement>
+                <label onClick={() => updateFilters({ active: null })}>
+                  <input type="radio" checked={filters.active == null} readOnly />
+                  No filter
+                </label>
+              </DropdownElement>
+              <DropdownElement>
+                <label onClick={() => updateFilters({ active: true })}>
+                  <input type="radio" checked={filters.active === true} readOnly />
+                  Active
+                </label>
+              </DropdownElement>
+              <DropdownElement>
+                <label onClick={() => updateFilters({ active: false })}>
+                  <input type="radio" checked={filters.active === false} readOnly />
+                  Inactive
+                </label>
+              </DropdownElement>
+            </Dropdown>
+          </div>
+
+          <div>
             <Dropdown label="Language">
               {languages.map((l) => (
                 <DropdownElement key={l}>
@@ -71,29 +94,6 @@ export default function Projects({ projects }: { projects: Project[] }) {
                   </label>
                 </DropdownElement>
               ))}
-            </Dropdown>
-          </div>
-
-          <div>
-            <Dropdown label="Activity">
-              <DropdownElement>
-                <label onClick={() => updateFilters({ active: null })}>
-                  <input type="radio" checked={filters.active == null} readOnly />
-                  No filter
-                </label>
-              </DropdownElement>
-              <DropdownElement>
-                <label onClick={() => updateFilters({ active: true })}>
-                  <input type="radio" checked={filters.active === true} readOnly />
-                  Active
-                </label>
-              </DropdownElement>
-              <DropdownElement>
-                <label onClick={() => updateFilters({ active: false })}>
-                  <input type="radio" checked={filters.active === false} readOnly />
-                  Inactive
-                </label>
-              </DropdownElement>
             </Dropdown>
           </div>
 
