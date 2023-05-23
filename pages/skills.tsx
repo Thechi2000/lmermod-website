@@ -2,6 +2,7 @@ import { readFileSync } from "fs";
 import Head from "next/head";
 import Dropdown, { DropdownElement } from "../components/dropdown";
 import { useState } from "react";
+import OrderingHeader, { compare } from "../components/ordering_header";
 
 interface Skill {
   name: string;
@@ -17,6 +18,11 @@ interface SkillFilters {
   level: number | null;
   type: string | null;
   language: string | null;
+}
+
+interface SkillOrdering {
+  column: string,
+  asc: boolean,
 }
 
 function SkillsSet({ skills }: { skills: Skill[] }) {
@@ -44,9 +50,21 @@ export default function Skills({ skills }: { skills: Skill[] }) {
     type: null,
     language: null,
   } as SkillFilters);
+  const [ordering, setOrdering] = useState(null as SkillOrdering | null)
 
   const types = [...new Set(skills.map(s => s.type).sort())];
   const languages = [...new Set(skills.map(s => s.language).filter(l => l != null).sort())];
+
+  function updateOrdering(column: string) {
+    if (ordering && ordering.column == column) {
+      setOrdering({ column, asc: !ordering.asc })
+    } else {
+      setOrdering({ column, asc: false })
+    }
+  }
+  function arrowClass(column: string) {
+    return ordering && ordering.column == column ? ordering.asc ? "arrow-up" : "arrow-down" : "";
+  }
 
   function updateFilters(change: Partial<SkillFilters>) {
     console.log(JSON.stringify(change));
@@ -61,8 +79,8 @@ export default function Skills({ skills }: { skills: Skill[] }) {
       <Head>
         <title>Competences - Ludovic Mermod</title>
       </Head>
-      <div id="projects">
-        <div id="project-filters">
+      <div id="skills">
+        <div className="table-filters">
           <input
             placeholder="Search..."
             onChange={(e) => updateFilters({ search: e.target.value })}
@@ -127,24 +145,24 @@ export default function Skills({ skills }: { skills: Skill[] }) {
           </div>
         </div>
 
-        <div className="project-table-container">
-          <table id="project-table">
+        <div className="table-container">
+          <table>
             <thead>
               <tr>
                 <th key="name">
-                  <p>Name</p>
+                  <OrderingHeader column="Name" ordering={ordering} setOrdering={setOrdering} />
                 </th>
                 <th key="description">
                   <p>Description</p>
                 </th>
                 <th key="type">
-                  <p>Type</p>
+                  <OrderingHeader column="Type" ordering={ordering} setOrdering={setOrdering} />
                 </th>
                 <th key="language">
-                  <p>Language</p>
+                  <OrderingHeader column="Language" ordering={ordering} setOrdering={setOrdering} />
                 </th>
                 <th key="level">
-                  <p>Level</p>
+                  <OrderingHeader column="Level" ordering={ordering} setOrdering={setOrdering} />
                 </th>
               </tr>
             </thead>
@@ -158,6 +176,7 @@ export default function Skills({ skills }: { skills: Skill[] }) {
             <tbody>
 
               {skills
+                .sort((p1, p2) => compare(p1, p2, ordering))
                 .filter(s => {
                   return (
                     (filters.search == null ||
@@ -172,9 +191,9 @@ export default function Skills({ skills }: { skills: Skill[] }) {
                 .map(s => (
                   <tr key={s.name}>
                     <td key="name">
-                        <a href={s.url} target="_blank" rel="noreferrer">
-                          {s.name}
-                        </a>
+                      <a href={s.url} target="_blank" rel="noreferrer">
+                        {s.name}
+                      </a>
                     </td>
                     <td key="description">
                       <p>{s.description}</p>

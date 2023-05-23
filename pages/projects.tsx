@@ -5,6 +5,7 @@ import ReactSelect, { components } from "react-select";
 import Select from "react-select";
 import ProjectRow, { Project } from "../components/project_row";
 import Dropdown, { DropdownElement } from "../components/dropdown";
+import OrderingHeader, { Ordering, compare } from "../components/ordering_header";
 
 interface ProjectFilters {
   string: string | null;
@@ -25,6 +26,8 @@ export default function Projects({ projects }: { projects: Project[] }) {
     .reduce((acc, val) => (val != undefined && acc.includes(val) ? acc : [...acc, val as string]), [] as string[])
     .sort();
 
+  const [ordering, setOrdering] = useState(null as Ordering | null)
+
   function updateFilters(change: Partial<ProjectFilters>) {
     console.log(JSON.stringify(change));
     console.log("hi");
@@ -40,7 +43,7 @@ export default function Projects({ projects }: { projects: Project[] }) {
         <title>Projects - Ludovic Mermod</title>
       </Head>
       <div id="projects">
-        <div id="project-filters">
+        <div className="table-filters">
           <input
             placeholder="Search..."
             onChange={(e) => updateFilters({ string: e.target.value })}
@@ -126,15 +129,15 @@ export default function Projects({ projects }: { projects: Project[] }) {
           </div>
         </div>
 
-        <div className="project-table-container">
-          <table id="project-table">
+        <div className="table-container">
+          <table>
             <thead>
               <tr>
                 <th key="name">
-                  <p>Name</p>
+                  <OrderingHeader column="Name" ordering={ordering} setOrdering={setOrdering} />
                 </th>
                 <th key="active">
-                  <p>Active</p>
+                  <OrderingHeader column="Active" ordering={ordering} setOrdering={setOrdering} />
                 </th>
                 <th key="description">
                   <p>Description</p>
@@ -143,7 +146,7 @@ export default function Projects({ projects }: { projects: Project[] }) {
                   <p>Languages</p>
                 </th>
                 <th key="organization">
-                  <p>Organization</p>
+                  <OrderingHeader column="Organization" ordering={ordering} setOrdering={setOrdering} />
                 </th>
               </tr>
             </thead>
@@ -156,6 +159,7 @@ export default function Projects({ projects }: { projects: Project[] }) {
             </colgroup>
             <tbody>
               {projects
+                .sort((p1, p2) => compare(p1, p2, ordering))
                 .filter((p) => {
                   return (
                     (filters.string == null ||

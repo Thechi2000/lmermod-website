@@ -1,0 +1,77 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table, table td {
+    border: 1px solid var(--border);
+}
+
+.table-container {
+    max-width: 100%;
+    width: unset;
+    overflow-x: auto;
+}
+
+table th,
+table td {
+    padding: 0.2em 1.5em;
+    text-align: center;
+    white-space: nowrap;
+}
+
+table th {
+    padding: 0.2em 1.5em;
+    user-select: none;
+}
+
+table th div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+table tr {
+    font-weight: normal;
+    min-width: fit-content;
+}
+
+.table-filters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.5%;
+    gap: 0.4rem;
+
+    width: 60%;
+}
+
+.table-filters > * {
+    min-width: 10em;
+    width: 12rem;
+    height: 100%;
+}
+
+.table-filters > input {
+    padding: 0.75em;
+    background-color: var(--background-color);
+    border-color: var(--border);
+    border: solid 1px #aaa;
+}
+
+.table-filters > div {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.table-filters > div > * {
+    width: 100%;
+}
