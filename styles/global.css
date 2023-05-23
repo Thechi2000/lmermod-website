@@ -30,7 +30,7 @@ body {
     min-height: 100vh;
 }
 
-#__next> :nth-child(3) {
+#__next > :nth-child(3) {
     flex-grow: 10;
 }
 

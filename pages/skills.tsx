@@ -6,11 +6,11 @@ import OrderingHeader, { compare } from "../components/ordering_header";
 
 interface Skill {
   name: string;
-  description: string,
+  description: string;
   level: number;
   type: string;
   language?: string;
-  url: string,
+  url: string;
 }
 
 interface SkillFilters {
@@ -21,8 +21,8 @@ interface SkillFilters {
 }
 
 interface SkillOrdering {
-  column: string,
-  asc: boolean,
+  column: string;
+  asc: boolean;
 }
 
 function SkillsSet({ skills }: { skills: Skill[] }) {
@@ -50,20 +50,27 @@ export default function Skills({ skills }: { skills: Skill[] }) {
     type: null,
     language: null,
   } as SkillFilters);
-  const [ordering, setOrdering] = useState(null as SkillOrdering | null)
+  const [ordering, setOrdering] = useState(null as SkillOrdering | null);
 
-  const types = [...new Set(skills.map(s => s.type).sort())];
-  const languages = [...new Set(skills.map(s => s.language).filter(l => l != null).sort())];
+  const types = [...new Set(skills.map((s) => s.type).sort())];
+  const languages = [
+    ...new Set(
+      skills
+        .map((s) => s.language)
+        .filter((l) => l != null)
+        .sort()
+    ),
+  ];
 
   function updateOrdering(column: string) {
     if (ordering && ordering.column == column) {
-      setOrdering({ column, asc: !ordering.asc })
+      setOrdering({ column, asc: !ordering.asc });
     } else {
-      setOrdering({ column, asc: false })
+      setOrdering({ column, asc: false });
     }
   }
   function arrowClass(column: string) {
-    return ordering && ordering.column == column ? ordering.asc ? "arrow-up" : "arrow-down" : "";
+    return ordering && ordering.column == column ? (ordering.asc ? "arrow-up" : "arrow-down") : "";
   }
 
   function updateFilters(change: Partial<SkillFilters>) {
@@ -95,14 +102,16 @@ export default function Skills({ skills }: { skills: Skill[] }) {
                   No filter
                 </label>
               </DropdownElement>
-              {types.map((t) => (
-                <DropdownElement key={t}>
-                  <label onClick={() => updateFilters({ type: t })}>
-                    <input type="radio" checked={filters.type === t} readOnly />
-                    {t}
-                  </label>
-                </DropdownElement>
-              )) as any}
+              {
+                types.map((t) => (
+                  <DropdownElement key={t}>
+                    <label onClick={() => updateFilters({ type: t })}>
+                      <input type="radio" checked={filters.type === t} readOnly />
+                      {t}
+                    </label>
+                  </DropdownElement>
+                )) as any
+              }
             </Dropdown>
           </div>
 
@@ -114,14 +123,16 @@ export default function Skills({ skills }: { skills: Skill[] }) {
                   No filter
                 </label>
               </DropdownElement>
-              {languages.map((l) => (
-                <DropdownElement key={l}>
-                  <label onClick={() => updateFilters({ language: l })}>
-                    <input type="radio" checked={filters.language === l} readOnly />
-                    {l}
-                  </label>
-                </DropdownElement>
-              )) as any}
+              {
+                languages.map((l) => (
+                  <DropdownElement key={l}>
+                    <label onClick={() => updateFilters({ language: l })}>
+                      <input type="radio" checked={filters.language === l} readOnly />
+                      {l}
+                    </label>
+                  </DropdownElement>
+                )) as any
+              }
             </Dropdown>
           </div>
 
@@ -133,14 +144,18 @@ export default function Skills({ skills }: { skills: Skill[] }) {
                   No filter
                 </label>
               </DropdownElement>
-              {[...Array(5).keys()].map(n => n + 1).map(l => (
-                <DropdownElement key={l}>
-                  <label onClick={() => updateFilters({ level: l })}>
-                    <input type="radio" checked={filters.level === l} readOnly />
-                    {l}
-                  </label>
-                </DropdownElement>
-              )) as any}
+              {
+                [...Array(5).keys()]
+                  .map((n) => n + 1)
+                  .map((l) => (
+                    <DropdownElement key={l}>
+                      <label onClick={() => updateFilters({ level: l })}>
+                        <input type="radio" checked={filters.level === l} readOnly />
+                        {l}
+                      </label>
+                    </DropdownElement>
+                  )) as any
+              }
             </Dropdown>
           </div>
         </div>
@@ -174,10 +189,9 @@ export default function Skills({ skills }: { skills: Skill[] }) {
               <col style={{ width: "5%" }} />
             </colgroup>
             <tbody>
-
               {skills
                 .sort((p1, p2) => compare(p1, p2, ordering))
-                .filter(s => {
+                .filter((s) => {
                   return (
                     (filters.search == null ||
                       filters.search.length == 0 ||
@@ -188,7 +202,7 @@ export default function Skills({ skills }: { skills: Skill[] }) {
                     (filters.level == null || filters.level == s.level)
                   );
                 })
-                .map(s => (
+                .map((s) => (
                   <tr key={s.name}>
                     <td key="name">
                       <a href={s.url} target="_blank" rel="noreferrer">
@@ -212,7 +226,7 @@ export default function Skills({ skills }: { skills: Skill[] }) {
             </tbody>
           </table>
         </div>
-      </div >
+      </div>
     </>
   );
 }

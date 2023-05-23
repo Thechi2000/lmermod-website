@@ -26,7 +26,7 @@ export default function Projects({ projects }: { projects: Project[] }) {
     .reduce((acc, val) => (val != undefined && acc.includes(val) ? acc : [...acc, val as string]), [] as string[])
     .sort();
 
-  const [ordering, setOrdering] = useState(null as Ordering | null)
+  const [ordering, setOrdering] = useState(null as Ordering | null);
 
   function updateFilters(change: Partial<ProjectFilters>) {
     console.log(JSON.stringify(change));

@@ -3,7 +3,8 @@ table {
     border-spacing: 0;
 }
 
-table, table td {
+table,
+table td {
     border: 1px solid var(--border);
 }
 

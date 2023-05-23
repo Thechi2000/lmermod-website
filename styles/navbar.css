@@ -52,11 +52,11 @@
     transition-duration: 0.5s;
 }
 
-[data-theme='light'] #theme-button {
+[data-theme="light"] #theme-button {
     transform: rotate3d(0, 0, 1, 180deg);
     fill: white;
 }
 
-[data-theme='dark'] #theme-button.dark {
+[data-theme="dark"] #theme-button.dark {
     fill: black;
 }
