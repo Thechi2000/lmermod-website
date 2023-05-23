@@ -28,9 +28,9 @@ export default function Footer() {
         </div>
       </a>
 
-      <a href="https://t.me/lmermod" target="_blank">
+      <a href="mailto:ludovic.mermod@epfl.ch" target="_blank">
         <div className="footer-link-content">
-          <MailLogo fill={"white"} />
+          <MailLogo fill={"var(--color)"} />
           Email
         </div>
       </a>
