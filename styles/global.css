@@ -6,7 +6,7 @@
     --link-color: rgb(182, 124, 0);
     --border: black;
 
-    font-family: "DejaVu Sans";
+    font-family: Tahoma, sans-serif;
 }
 
 [data-theme="dark"] {
