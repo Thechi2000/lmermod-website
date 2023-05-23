@@ -28,8 +28,6 @@ export default function NavBar() {
       ))}
       <ThemeIcon
         id={"theme-button"}
-        className={theme}
-        fill={theme === "light" ? "white" : "black"}
         onClick={() => {
           setTheme(theme === "light" ? "dark" : "light");
         }}
