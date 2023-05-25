@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@svgr/webpack": "^8.0.1",
     "@headlessui/react": "^1.7.13",
     "@heroicons/react": "^2.0.16",
     "@next/font": "13.1.1",
@@ -30,7 +31,6 @@
     "typescript": "4.9.4"
   },
   "devDependencies": {
-    "@svgr/webpack": "^8.0.1",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1"
   }
