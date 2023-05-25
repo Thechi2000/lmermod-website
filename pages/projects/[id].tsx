@@ -48,7 +48,7 @@ export async function getServerSideProps(
 ): Promise<GetServerSidePropsResult<ServerProps>> {
   let { id } = context.query;
 
-  let project = (JSON.parse(readFileSync("data/projects.json", "utf8").toString()) as Project[]).find(
+  let project = ((await fetch("https://lmermod.ch/data/projects.json").then((p) => p.json())) as Project[]).find(
     (p) => p.id == id
   );
   if (project == undefined) {
@@ -59,7 +59,12 @@ export async function getServerSideProps(
 
   let { file, url } = project as Project;
 
-  let markdown = file != undefined ? readFileSync("data/projects/" + file).toString() : null;
+  let markdown =
+    file != undefined
+      ? await fetch("https://lmermod.ch/data/projects./" + file)
+          .then((p) => p.text())
+          .toString()
+      : null;
 
   if (url != undefined) {
     let res = await fetch(url as string);
