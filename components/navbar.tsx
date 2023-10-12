@@ -6,7 +6,6 @@ import ThemeIcon from "assets/theme-light-dark.svg";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "About me", href: "/aboutme" },
   { name: "Projects", href: "/projects" },
   { name: "Skills", href: "/skills" },
 ];

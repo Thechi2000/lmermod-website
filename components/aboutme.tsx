@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import AboutMeSection from "../components/aboutme_section";
+import AboutMeSection from "./aboutme_section";
 
 import EpflLogo from "assets/epfl-logo.svg";
 import AgepolyLogo from "assets/agepoly-logo.svg";
