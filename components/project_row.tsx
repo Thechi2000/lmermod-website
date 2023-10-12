@@ -1,19 +1,5 @@
 import Link from "next/link";
-
-export interface Project {
-  id: string;
-
-  name: string;
-  description: string;
-
-  file?: string;
-  url?: string;
-
-  languages: string[];
-  organization?: string;
-  repository?: string;
-  active: boolean;
-}
+import { Project } from "../data";
 
 export default function ProjectRow({
   project: { id, name, description, languages, organization, repository, active, file, url },

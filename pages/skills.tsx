@@ -1,17 +1,8 @@
-import { readFileSync } from "fs";
 import Head from "next/head";
 import Dropdown, { DropdownElement } from "../components/dropdown";
 import { useState } from "react";
 import OrderingHeader, { compare } from "../components/ordering_header";
-
-interface Skill {
-  name: string;
-  description: string;
-  level: number;
-  type: string;
-  language?: string;
-  url: string;
-}
+import { Skill } from "../data";
 
 interface SkillFilters {
   search: string | null;

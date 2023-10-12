@@ -8,6 +8,7 @@ import AgepolyLogo from "assets/agepoly-logo.svg";
 import ClicLogo from "assets/clic-logo.svg";
 import RustLogo from "assets/rust-logo.svg";
 import CLogo from "assets/c-logo.svg";
+import Regex from "assets/regex-logo.svg";
 
 export default function AboutMe() {
   return (
@@ -23,7 +24,34 @@ export default function AboutMe() {
               EPFL
             </a>
             &nbsp;since 2020. I am taking the bachelor&apos;s degree in computer science, and currently in my third year
-            of study. I also work for two student associations and as a teaching assistant.
+            of study. I also work for two student associations, as a teaching and research assistant.
+            <br />
+          </p>
+        </AboutMeSection>
+
+        <div className="separator" />
+
+        <AboutMeSection logo={<ClicLogo />}>
+          <p>
+            &emsp; Since autumn 2022, I am IT Co-Manager of the{" "}
+            <a href="https://clic.epfl.ch/" rel="noopener noreferrer nofollow" target="_blank">
+              CLIC
+            </a>
+            , the student association of the IC faculty. I help maintaining the association's server and building
+            services to help the rest of the associations in their tasks.
+          </p>
+        </AboutMeSection>
+
+        <div className="separator" />
+
+        <AboutMeSection logo={<Regex />}>
+          <p>
+            &emsp; I was recruited by the{" "}
+            <a href="https://systemf.epfl.ch/" rel="noopener noreferrer nofollow" target="_blank">
+              Systems and Formalism laboratory
+            </a>{" "}
+            from EPFL, to translate an algorithm able to match Regexp containing lookarounds in linear time, whereas
+            current engine only implement it in exponential time.
             <br />
           </p>
         </AboutMeSection>
@@ -39,19 +67,6 @@ export default function AboutMe() {
             , the general association of polytechnic students, since spring 2022 as part of the IT team, as a backend
             developper. My main projects there are <Link href="/projects/agevote">AGEVoté</Link> and{" "}
             <Link href="/projects/whiskey">Whiskey</Link>.
-          </p>
-        </AboutMeSection>
-
-        <div className="separator" />
-
-        <AboutMeSection logo={<ClicLogo />}>
-          <p>
-            &emsp; Since autumn 2022, I am in the IT and Logistique/Event team of the{" "}
-            <a href="https://clic.epfl.ch/" rel="noopener noreferrer nofollow" target="_blank">
-              CLIC
-            </a>
-            , the student association of the IC faculty. I am building <Link href="/projects/reuform">Reuform</Link> and
-            working in the team for their <Link href="/projects/clic-website">website</Link>.
           </p>
         </AboutMeSection>
 

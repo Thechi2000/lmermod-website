@@ -1,4 +1,3 @@
-import Image from "next/image";
 import GithubLogo from "assets/github-logo.svg";
 import GitlabLogo from "assets/gitlab-logo.svg";
 import TelegramLogo from "assets/telegram-logo.svg";

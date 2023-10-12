@@ -1,5 +1,4 @@
-import Script from "next/script";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function DropdownElement({ children }: { children: JSX.Element[] | JSX.Element }) {
   return <li onClick={(e) => e.stopPropagation()}>{children}</li>;
@@ -84,7 +83,7 @@ export default function Dropdown({
       };
     },
     // only update the effect if the ref element changed
-    [drop.current]
+    [drop.current, width]
   );
 
   return (

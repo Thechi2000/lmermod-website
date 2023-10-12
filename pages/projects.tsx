@@ -1,11 +1,9 @@
-import { readFileSync } from "fs";
 import Head from "next/head";
 import { useState } from "react";
-import ReactSelect, { components } from "react-select";
-import Select from "react-select";
-import ProjectRow, { Project } from "../components/project_row";
+import ProjectRow from "../components/project_row";
 import Dropdown, { DropdownElement } from "../components/dropdown";
 import OrderingHeader, { Ordering, compare } from "../components/ordering_header";
+import { Project } from "../data";
 
 interface ProjectFilters {
   string: string | null;

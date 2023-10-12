@@ -1,8 +1,7 @@
-import { readFileSync } from "fs";
 import { GetServerSidePropsContext, GetServerSidePropsResult } from "next";
 import Head from "next/head";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
-import { Project } from "../../components/project_row";
+import { Project } from "../../data";
 
 interface ServerProps {
   markdown: string | null;
