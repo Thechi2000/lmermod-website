@@ -2,7 +2,7 @@ import Head from "next/head";
 import Dropdown, { DropdownElement } from "../components/dropdown";
 import { useState } from "react";
 import OrderingHeader, { compare } from "../components/ordering_header";
-import { Skill } from "../data";
+import { Skill } from "../../data";
 
 interface SkillFilters {
   search: string | null;

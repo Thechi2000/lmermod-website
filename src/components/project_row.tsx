@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Project } from "../data";
+import { Project } from "../../data";
 
 export default function ProjectRow({
   project: { id, name, description, languages, organization, repository, active, file, url },

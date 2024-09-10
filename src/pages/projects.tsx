@@ -3,7 +3,7 @@ import { useState } from "react";
 import ProjectRow from "../components/project_row";
 import Dropdown, { DropdownElement } from "../components/dropdown";
 import OrderingHeader, { Ordering, compare } from "../components/ordering_header";
-import { Project } from "../data";
+import { Project } from "../../data";
 
 interface ProjectFilters {
   string: string | null;
