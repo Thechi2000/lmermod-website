@@ -21,8 +21,8 @@ table th {
 table th,
 table td {
     padding: 0.2em 1.5em;
+    max-width: 80ch;
     text-align: center;
-    white-space: nowrap;
 }
 
 table th {
