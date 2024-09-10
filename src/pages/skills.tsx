@@ -41,7 +41,7 @@ export default function Skills({ skills }: { skills: Skill[] }) {
     type: null,
     language: null,
   } as SkillFilters);
-  const [ordering, setOrdering] = useState({ column: "level", asc: true } as SkillOrdering);
+  const [ordering, setOrdering] = useState({ column: "level", asc: true } as SkillOrdering | null);
 
   const types = [...new Set(skills.map((s) => s.type).sort())];
   const languages = [
