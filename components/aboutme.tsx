@@ -3,12 +3,12 @@ import Link from "next/link";
 
 import AboutMeSection from "./aboutme_section";
 
-import EpflLogo from "assets/epfl-logo.svg";
-import AgepolyLogo from "assets/agepoly-logo.svg";
-import ClicLogo from "assets/clic-logo.svg";
-import RustLogo from "assets/rust-logo.svg";
-import CLogo from "assets/c-logo.svg";
-import Regex from "assets/regex-logo.svg";
+import EpflLogo from "../assets/epfl-logo.svg";
+import AgepolyLogo from "../assets/agepoly-logo.svg";
+import ClicLogo from "../assets/clic-logo.svg";
+import RustLogo from "../assets/rust-logo.svg";
+import CLogo from "../assets/c-logo.svg";
+import Regex from "../assets/regex-logo.svg";
 
 export default function AboutMe() {
   return (
@@ -37,7 +37,7 @@ export default function AboutMe() {
             <a href="https://clic.epfl.ch/" rel="noopener noreferrer nofollow" target="_blank">
               CLIC
             </a>
-            , the student association of the IC faculty. I help maintaining the association's server and building
+            , the student association of the IC faculty. I help maintaining the association&apos;s server and building
             services to help the rest of the associations in their tasks.
           </p>
         </AboutMeSection>

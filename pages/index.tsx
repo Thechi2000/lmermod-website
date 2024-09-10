@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import Ferris from "assets/ferris-gesture.svg";
+import Ferris from "../assets/ferris-gesture.svg";
 import AboutMe from "../components/aboutme";
 
 export default function Home() {

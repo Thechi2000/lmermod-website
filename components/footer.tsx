@@ -1,7 +1,7 @@
-import GithubLogo from "assets/github-logo.svg";
-import GitlabLogo from "assets/gitlab-logo.svg";
-import TelegramLogo from "assets/telegram-logo.svg";
-import MailLogo from "assets/mail-logo.svg";
+import GithubLogo from "../assets/github-logo.svg";
+import GitlabLogo from "../assets/gitlab-logo.svg";
+import TelegramLogo from "../assets/telegram-logo.svg";
+import MailLogo from "../assets/mail-logo.svg";
 
 export default function Footer() {
   return (
